@@ -17,7 +17,7 @@
                 <li>
                     <a href="">Inicio</a>
                 </li>
-                <li><a href="menuproduc.php">Productos</a></li>
+                <li><a href="<?php echo $base_url;?>menuproduc.php">Productos</a></li>
                 <li><a href="">Ventas</a></li>
                 <li><a href="">Ingresos</a></li>
                 <li><a href="">Personal</a></li>

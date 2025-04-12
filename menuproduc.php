@@ -18,7 +18,7 @@ include "header.php";
     <tr>
       <td><a href="producto/regisprodu.php">Registrar</a></td>
       <td>Buscar</td>
-      <td>Listar</td>
+      <td><a href="producto/listarprodu.php">Listar</a></td>
     </tr>
   </table>
 
