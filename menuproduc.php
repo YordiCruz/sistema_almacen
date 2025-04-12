@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Tabla de menu</title>
-    <link rel="stylesheet" href="assest/estilos/style.css">
-  </head>
-  <body>
-  <table class="table-menu">
+
+
+
+<?php
+
+include "header.php";
+
+?>
+
+
+<table class="table-menu">
+    <caption>Menu Productos</caption>
     <tr>
-      <td><img src="assest/img/create.png" alt="" class="img-menu"></td>
-      <td><img src="assest/img/buscar.png" alt="" class="img-menu"></td>
-      <td><img src="assest/img/lista-de-verificacion.png" alt="" class="img-menu"></td>
+      <td><img src="./img/create.png" alt="" class="img-menu"></td>
+      <td><img src="./img/buscar.png" alt="" class="img-menu"></td>
+      <td><img src="./img/lista-de-verificacion.png" alt="" class="img-menu"></td>
     </tr>
     <tr>
-      <td>Registrar</td>
+      <td><a href="producto/regisprodu.php">Registrar</a></td>
       <td>Buscar</td>
       <td>Listar</td>
     </tr>
   </table>
-  </body>
-</html>
+
+  <?php
+    include "footer.php";
+?>
