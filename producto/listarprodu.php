@@ -31,8 +31,9 @@
             <td><?php echo $pro[4]; ?></td>
             <td><?php echo $pro[5]; ?></td>
             <td> <img src="../img/<?php echo $pro[6]; ?>" alt="" width="100"> </td>
-            <td>  <button>editar</button>
-            <button>eliminar</button></td>
+            <td><button><a href="foredipro.php?id=<?php echo $pro[0]; ?>">Editar</a></button>
+            <!--el ? indica que se enviara por get osea por url l--->
+            <button><a href="javascript:void(0);" onclick='confirmarEliminacion(<?php echo $pro[0];?>)'">Eliminar</a></button></td>
         </tr>
        
         <!-- este corte de while es para que cree una fila--->
@@ -45,7 +46,15 @@
   </tbody>
 </table>
 
-
+<script>
+    // Función JavaScript que confirma la eliminación
+    function confirmarEliminacion(id) {
+        if (confirm("¿Estás seguro de que deseas eliminar este producto?")) {
+            // Si el usuario confirma, redirige a la página de eliminación
+            window.location.href = 'eliminarpro.php?id=' + id;
+        }
+    }
+</script>
 <?php
 include "../footer.php";
 
