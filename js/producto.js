@@ -7,7 +7,8 @@ function validar() {
     const marca = document.getElementById("marc").value;           
     const proveedor = document.getElementById("prov").value;       
     const categoria = document.getElementById("catego").value;          
-    
+
+
 
     if (descripcion == null || descripcion.length == 0) {
         document.getElementById("error-descri").innerHTML = "El campo Descripción es obligatorio";
@@ -30,3 +31,41 @@ function validar() {
         
     return true;
 }
+
+const articuloscarrito = [];
+document.addEventListener("DOMContentLoaded", () => {
+    addListeners();
+  });
+  
+  function addListeners() {
+    const boton = document.getElementById("agregar");
+    boton?.addEventListener("click", agregar); // el ? evita error si no existe el botón
+  }
+  
+  function agregar() {
+    const cliente = document.getElementById("cliente");
+    const producto = document.getElementById("producto");
+    const cantidad = parseInt(document.getElementById("cantidad").value, 10);  
+    const carrito = document.getElementById("tbody");
+   const selected = producto.options[producto.selectedIndex];
+   const precio = selected.dataset.precio;
+   // console.warn(precio);
+    
+    let total = precio * cantidad;
+    console.warn(total);
+    
+    const dato = cliente.options[cliente.selectedIndex].text;
+    const valor = cliente.value;
+    const dato2 = producto.options[producto.selectedIndex].text;
+    const valor2 = producto.value;
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${dato}</td><td>${dato2}</td><td>${cantidad}</td>`;
+    carrito.appendChild(row);
+    articuloscarrito.push(carrito.innerText) ;
+    console.warn(articuloscarrito);
+    
+    //c
+        
+  }
+  
+

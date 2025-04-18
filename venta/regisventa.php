@@ -33,26 +33,33 @@ include "../header.php";
             $producto_sql = mysqli_query($conec, "SELECT * from producto");
             while($pro = mysqli_fetch_array($producto_sql)){
                 ?>
-                <option value="<?php echo $pro[0]; ?>">
-                    <?php echo $pro[1]." ".$pro[2] ?>
+                <option value="<?php echo $pro[0];?>" data-precio="<?php echo $pro[3];?>">
+                    <?php echo $pro[1]?>                    
                 </option>
                 <?php
             }
+            
             ?>
+            
+
         </select>
+
+        
+
         <p id="error-producto" class="errorr"></p>
         <label for="">Cantidad</label>
         <input type="number" class="form-control" name="cantidad" id="cantidad">
         <p id="error-cantidad" class="errorr"></p>
         </div>
         <div class="col-50">
-            <table>
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Cliente</th>
                         <th>Producto</th>
                         <th>Cantidad</th>
-                        
+                        <th>Precio</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody id="tbody">
@@ -64,7 +71,7 @@ include "../header.php";
     
         <div class="row">
                 <div class="col-50">
-                    <input type="button" class="form-control cancelar" value="Agregar" >
+                    <input id="agregar" type="button" class="form-control cancelar" value="Agregar" >
                 </div>
                 <div class="col-50">
                 <input type="submit" class="fom-control" value="Guardar">
