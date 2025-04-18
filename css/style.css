@@ -173,3 +173,9 @@
     padding: 15px 0 15px 0;
     color: #4b4b4b;
   }
+
+  .errorr{
+    color: red;
+    font-size: 12px;
+
+  }

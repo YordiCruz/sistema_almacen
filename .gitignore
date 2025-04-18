@@ -1,3 +1,35 @@
 elementos_sistema
 .vscode
 .env
+
+/conexion.php
+
+
+# Ignorar el archivo de conexión a la base de datos
+conexion.php
+
+# Ignorar archivos de configuración sensibles
+*.env
+config.php
+
+# Ignorar carpetas de dependencias
+/vendor/
+node_modules/
+
+# Ignorar archivos de sistema o IDEs
+.DS_Store
+Thumbs.db
+*.log
+
+# Ignorar backups y archivos temporales
+*.bak
+*.tmp
+*.swp
+
+# Ignorar directorios de caché o temporales
+/cache/
+/tmp/
+/logs/
+
+# Ignorar archivos de sesión
+sessions/

@@ -16,9 +16,9 @@ include "header.php";
       <td><img src="./img/lista-de-verificacion.png" alt="" class="img-menu"></td>
     </tr>
     <tr>
-      <td><a href="producto/regisprodu.php">Registrar</a></td>
-      <td ><a href="producto/forbuscaprod.php">Buscar</td>
-      <td><a href="producto/listarprodu.php">Listar</a></td>
+      <td><a href="venta/regisventa.php">Registrar</a></td>
+      <td ><a href="venta/forbuscaventa.php">Buscar</td>
+      <td><a href="venta/listarventa.php">Listar</a></td>
     </tr>
   </table>
 
